@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="card card-custom gutter-b">
+    <div class="card-header">
+        <div class="card-title">
+            <h3 class="card-label"> List Of Innovations </h3>
+        </div>
+    </div>
+    <div class="card-body">
+        <!--begin::Example-->
+        <div class="example mb-10">
+
+            <div class="table-responsive-lg">
+                <table class="table">
+                    <thead>
+                        <tr>
+                          
+                            <th scope="col">Title </th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="inno in myListOfInnovations">
+                            <td> {{inno.Title}}</td>
+                            <td> {{inno.Description}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!--end::Example-->
+    </div>
+</div>
+
+
+
