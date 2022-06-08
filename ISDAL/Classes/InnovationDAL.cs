@@ -18,15 +18,40 @@ namespace ISDAL.Classes
             return db.SaveChanges() > 0;
         }
 
-        public bool Delete(int id)
+        public string Delete(int id, int userid)
         {
-            db.Innovations.Remove(db.Innovations.FirstOrDefault(x => x.Id == id));
-            return db.SaveChanges() > 0;
+
+            var model = db.Innovations.FirstOrDefault(x => x.Id == id);
+
+            if (model != null)
+            {
+                if (model.CreatedBy == userid)
+                {
+
+                    db.Innovations.Remove(model);
+                    var data = db.SaveChanges() > 0;
+                    if (data)
+                    {
+                        return " Delete Success";
+                    }
+                    else
+                    {
+                        return "Failed To Delte ";
+                    }
+                }
+                else
+                {
+                    return "You don't have permission to delete this innovation";
+                }
+            }
+            else
+            {
+                return $"there is no Innovation With Id {id.ToString()}";
+            }
         }
 
         public List<Innovation> GetAll() => db.Innovations.ToList();
         public Innovation GetById(int id) => db.Innovations.Find(id);
-        public Innovation GetFirstInnovation() => db.Innovations.First();
 
         public Innovation Update(Innovation model)
         {
@@ -44,5 +69,9 @@ namespace ISDAL.Classes
                 return null;
             }
         }
+
+
+        public Innovation GetFirstInnovation() => db.Innovations.First();
+
     }
 }

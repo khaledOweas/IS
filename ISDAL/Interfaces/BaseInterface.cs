@@ -10,7 +10,7 @@ namespace ISDAL.Interfaces
     public interface BaseInterface<T> where T : class
     {
         bool Add(T model);
-        bool Delete(int id);
+        string Delete(int id, int userid);
         T Update(T model);
         List<T> GetAll();
         T GetById(int id);

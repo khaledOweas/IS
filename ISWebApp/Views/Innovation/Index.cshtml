@@ -2,38 +2,76 @@
 @{
     ViewBag.Title = "Index";
 }
-<div class="card card-custom gutter-b">
-    <div class="card-header">
-        <div class="card-title">
-            <h3 class="card-label"> List Of Innovations </h3>
+<div ng-controller="ISC">
+    <div class="card card-custom">
+        <div class="card-header">
+            <h3 class="card-title">
+                Adding Innovation Card
+            </h3>
         </div>
-    </div>
-    <div class="card-body">
-        <!--begin::Example-->
-        <div class="example mb-10">
+        <!--begin::Form-->
+        <div class="form">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Title </label>
+                    <input type="text" class="form-control" ng-model="title" placeholder="Enter Title ">
+                    <span class="form-text text-muted"> Enter Title Of innovation here .</span>
+                </div>
 
-            <div class="table-responsive-lg">
-                <table class="table">
-                    <thead>
-                        <tr>
-                          
-                            <th scope="col">Title </th>
-                            <th scope="col">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="inno in myListOfInnovations">
-                            <td> {{inno.Title}}</td>
-                            <td> {{inno.Description}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div class="form-group">
+                    <label> Description </label>
+                    <input type="text" class="form-control" ng-model="description" placeholder="Enter Description">
+                    <span class="form-text text-muted">Enter Description Of innovation here.</span>
+                </div>
+
+
             </div>
-
+            <div class="card-footer">
+                <button type="reset" class="btn btn-bg-success mr-2" ng-click="AddInnovation()"> Add Innovation </button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
+            </div>
         </div>
-        <!--end::Example-->
+        <!--end::Form-->
     </div>
+    <br />
+    <div class="card card-custom gutter-b">
+        <div class="card-header">
+            <div class="card-title">
+                <h3 class="card-label"> List Of Innovations </h3>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <div class="example mb-10">
+                <div class="table-responsive-lg">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Title </th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Tools</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in myListOfInnovations">
+                                <td> {{item.Title}}</td>
+                                <td> {{item.Description}}</td>
+                                <td> <button class="btn btn-danger" ng-click="DeleteInnovation(item.Id)">  Delete  </button>  </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
+@section AngularJSScripts{
 
+    <script src="~/assets/ngscripts/ISCController.ng.js"></script>
+
+
+}
 

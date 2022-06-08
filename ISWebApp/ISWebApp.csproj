@@ -1977,6 +1977,8 @@
     <Content Include="assets\media\users\user3.jpg" />
     <Content Include="assets\media\users\user4.jpg" />
     <Content Include="assets\media\users\user5.jpg" />
+    <Content Include="assets\ngscripts\MainController.ng.js" />
+    <Content Include="assets\ngscripts\ISCController.ng.js" />
     <Content Include="assets\plugins\angular.min.js" />
     <Content Include="assets\plugins\custom\ckeditor\ckeditor-balloon-block.bundle.js" />
     <Content Include="assets\plugins\custom\ckeditor\ckeditor-balloon.bundle.js" />
