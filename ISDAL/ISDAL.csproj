@@ -55,6 +55,7 @@
     <Compile Include="Interfaces\BaseInterface.cs" />
     <Compile Include="Interfaces\IInnovationInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\InnovationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

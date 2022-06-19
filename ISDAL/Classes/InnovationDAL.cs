@@ -2,6 +2,8 @@
 using ISData;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
+using ISDAL.ViewModels;
 
 namespace ISDAL.Classes
 {
@@ -25,7 +27,7 @@ namespace ISDAL.Classes
 
             if (model != null)
             {
-                if (model.CreatedBy == userid)
+                if (model.CreatedUserId == userid)
                 {
 
                     db.Innovations.Remove(model);
@@ -50,7 +52,25 @@ namespace ISDAL.Classes
             }
         }
 
-        public List<Innovation> GetAll() => db.Innovations.ToList();
+        public List<Innovation> GetAll()
+        {
+            return db.Innovations.ToList();
+        }
+        public List<InnovationViewModel> GetAllToView()
+        {
+            return db.Innovations
+                .Include(x => x.CreatedUser)
+                .AsNoTracking()
+                .Select(x => new InnovationViewModel()
+                {
+                    Id= x.Id,
+                    Title = x.Title,
+                    Description = x.Description,
+                    UserName = x.CreatedUser.Name,
+                    CreatedUserId = x.CreatedUserId
+                }).ToList();
+        }
+
         public Innovation GetById(int id) => db.Innovations.Find(id);
 
         public Innovation Update(Innovation model)

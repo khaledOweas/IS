@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="card-body">
-
+          
             <div class="example mb-10">
                 <div class="table-responsive-lg">
                     <table class="table">
@@ -50,6 +50,7 @@
                             <tr>
                                 <th scope="col">Title </th>
                                 <th scope="col">Description</th>
+                                <th scope="col">Created By </th>
                                 <th scope="col">Tools</th>
                             </tr>
                         </thead>
@@ -57,6 +58,7 @@
                             <tr ng-repeat="item in myListOfInnovations">
                                 <td> {{item.Title}}</td>
                                 <td> {{item.Description}}</td>
+                                <td> {{item.UserName}}</td>
                                 <td> <button class="btn btn-danger" ng-click="DeleteInnovation(item.Id)">  Delete  </button>  </td>
                             </tr>
                         </tbody>
@@ -68,7 +70,7 @@
 
 </div>
 
-@section AngularJSScripts{ 
-    <script src="~/assets/ngscripts/ISCController.ng.js"></script> 
+@section AngularJSScripts{
+    <script src="~/assets/ngscripts/ISCController.ng.js"></script>
 }
 

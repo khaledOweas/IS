@@ -1,4 +1,5 @@
-﻿using ISData;
+﻿using ISDAL.ViewModels;
+using ISData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace ISDAL.Interfaces
     public interface IInnovationInterface : BaseInterface<Innovation>
     {
         Innovation GetFirstInnovation();
+        List<InnovationViewModel> GetAllToView();
     }
 }

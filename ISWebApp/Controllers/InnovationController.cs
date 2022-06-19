@@ -1,5 +1,6 @@
 ﻿using ISDAL.Classes;
 using ISData;
+using ISWebApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,8 @@ namespace ISWebApp.Controllers
         public JsonResult GetAllInnovations()
         {
             InnovationDAL DAL = new InnovationDAL();
-            var allData = DAL.GetAll();
-            // JsonRequestBehavior.AllowGet  >>  To Avoid Block Json .. 
+            var allData = DAL.GetAllToView();
+
             return Json(allData, JsonRequestBehavior.AllowGet);
         }
 
@@ -30,9 +31,7 @@ namespace ISWebApp.Controllers
         public JsonResult AddInnovation(Innovation model)
         {
             InnovationDAL DAL = new InnovationDAL();
-
             var res = DAL.Add(model);
-
             return Json(res, JsonRequestBehavior.AllowGet);
 
         }
@@ -45,6 +44,6 @@ namespace ISWebApp.Controllers
 
             return Json(res, JsonRequestBehavior.AllowGet);
 
-        } 
+        }
     }
 }

@@ -51,6 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202206191129145_Clear.cs" />
+    <Compile Include="Migrations\202206191129145_Clear.designer.cs">
+      <DependentUpon>202206191129145_Clear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206191137224_AddingUser.cs" />
+    <Compile Include="Migrations\202206191137224_AddingUser.designer.cs">
+      <DependentUpon>202206191137224_AddingUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Innovation.cs" />
     <Compile Include="Context\ISDB.cs" />
     <Compile Include="Migrations\202206011336555_AddingInovationTable.cs" />
@@ -58,6 +66,7 @@
       <DependentUpon>202206011336555_AddingInovationTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +76,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202206011336555_AddingInovationTable.resx">
       <DependentUpon>202206011336555_AddingInovationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206191129145_Clear.resx">
+      <DependentUpon>202206191129145_Clear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206191137224_AddingUser.resx">
+      <DependentUpon>202206191137224_AddingUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

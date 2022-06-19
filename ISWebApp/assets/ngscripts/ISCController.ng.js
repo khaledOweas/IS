@@ -1,10 +1,9 @@
 ﻿// angular forms 
-app.controller('ISC', ($scope, $http) => {
+app.controller('ISC', ($scope, $rootScope, $http) => {
 
     // Variables 
-    $scope.title = "";
-    $scope.description = "";
-
+    $scope.title = " Hello ";
+    $scope.description = " is it me . ";
 
     // Get All 
     $scope.GetAllInnovaitions = () => {
@@ -25,11 +24,13 @@ app.controller('ISC', ($scope, $http) => {
     // Add Innovation
     $scope.AddInnovation = () => {
 
-        $scope.model = { "Id": 1, "Title": $scope.title, "Description": $scope.description };
+        $scope.model = { "Id": 1, "Title": $scope.title, "Description": $scope.description, "CreatedUserId": 1, "UserName": "Mohamed" }; // for Now ..
         $http.post('/Innovation/AddInnovation', $scope.model).then(
             (res) => {
                 // TODO: Success
                 $scope.myListOfInnovations.push($scope.model);
+
+                /* $scope.GetAllInnovaitions();*/
                 $scope.title = "";
                 $scope.description = "";
             },
@@ -54,7 +55,7 @@ app.controller('ISC', ($scope, $http) => {
                 // get index from array , 
                 // slice from array 
 
-                $scope.index = $scope.myListOfInnovations.findIndex(x => x.id == id); 
+                $scope.index = $scope.myListOfInnovations.findIndex(x => x.id == id);
                 $scope.myListOfInnovations.splice($scope.index, 1)
 
             },

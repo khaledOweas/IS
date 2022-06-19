@@ -1,7 +1,8 @@
 ﻿var app = angular.module("InnovationAPP", []);
 
-app.controller('MainController', function ($scope, $http) {
-    //  varia
+app.controller('MainController', function ($scope, $rootScope, $http) {
 
+
+    $scope.name = "Nagham Nabil ";
 
 });
