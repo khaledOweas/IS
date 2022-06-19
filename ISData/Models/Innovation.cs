@@ -14,8 +14,4 @@ namespace ISData
 
         public int CreatedBy { get; set; }
     }
-}
-
-
-// Access Modifiers  
-// [Public , Private , Internal  , Protected , Default  ]
+} 

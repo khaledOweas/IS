@@ -11,5 +11,6 @@ namespace ISData
 
         }  
         public DbSet<Innovation> Innovations { get; set; }
+         
     }
 }

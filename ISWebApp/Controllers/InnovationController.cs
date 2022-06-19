@@ -45,11 +45,6 @@ namespace ISWebApp.Controllers
 
             return Json(res, JsonRequestBehavior.AllowGet);
 
-        }
-
-
-
-
-
+        } 
     }
 }
