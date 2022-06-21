@@ -9,6 +9,7 @@ namespace ISData
     public class Strings
     {
         public static readonly string CS = @"Server=.;Database=ISDB;Trusted_Connection=True;";
+        
         // public static readonly string CS = @"Server=NAGHAMNABIL-NB\SQLEXPRESS;Database=ISDB3;Trusted_Connection=True;";
     }
 }
