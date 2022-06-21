@@ -51,6 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202206201128546_ISDB3.cs" />
+    <Compile Include="Migrations\202206201128546_ISDB3.designer.cs">
+      <DependentUpon>202206201128546_ISDB3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Migrations\202206191129145_Clear.cs" />
     <Compile Include="Migrations\202206191129145_Clear.designer.cs">
       <DependentUpon>202206191129145_Clear.cs</DependentUpon>
@@ -82,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206191137224_AddingUser.resx">
       <DependentUpon>202206191137224_AddingUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206201128546_ISDB3.resx">
+      <DependentUpon>202206201128546_ISDB3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

@@ -2,8 +2,8 @@
 app.controller('ISC', ($scope, $rootScope, $http) => {
 
     // Variables 
-    $scope.title = " Hello ";
-    $scope.description = " is it me . ";
+    $scope.title = " ";
+    $scope.description = " ";
 
     // Get All 
     $scope.GetAllInnovaitions = () => {

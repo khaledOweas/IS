@@ -51,8 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CategoryDAL.cs" />
     <Compile Include="Classes\InnovationDAL.cs" />
     <Compile Include="Interfaces\BaseInterface.cs" />
+    <Compile Include="Interfaces\ICategoryInterface.cs" />
     <Compile Include="Interfaces\IInnovationInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\InnovationViewModel.cs" />

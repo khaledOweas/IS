@@ -17,5 +17,7 @@ namespace ISData
         [ForeignKey("CreatedUser")]
         public int CreatedUserId { get; set; }
         public virtual User CreatedUser { get; set; }
+        public virtual Category InnovationCategory { get; set; }
+
     }
 }
