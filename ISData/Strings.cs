@@ -10,6 +10,6 @@ namespace ISData
     {
         public static readonly string CS = @"Server=.;Database=ISDB;Trusted_Connection=True;";
 
-        //  /  - - // public static readonly string CS = @"Server=NAGHAMNABIL-NB\SQLEXPRESS;Database=ISDB3;Trusted_Connection=True;";
+        //  /  - Test  - // public static readonly string CS = @"Server=NAGHAMNABIL-NB\SQLEXPRESS;Database=ISDB3;Trusted_Connection=True;";
     }
 }
