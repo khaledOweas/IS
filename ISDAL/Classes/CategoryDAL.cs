@@ -9,7 +9,7 @@ using ISDAL.ViewModels;
 
 namespace ISDAL.Classes
 {
-    public class CategoryDAL : ICategory
+    public class CategoryDAL : ICategoryInterface 
     {
         ISDB db;
         public CategoryDAL()

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace ISDAL.Interfaces
 {
-
     // !!!!!! WHY  ..  To Adding Customize Function For Every Entity   !!!!!! 
     public interface IInnovationInterface : BaseInterface<Innovation>
     {

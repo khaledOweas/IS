@@ -7,7 +7,7 @@ using ISData;
 
 namespace ISDAL.Interfaces
 {
-    public interface ICategory: BaseInterface<Category>
+    public interface ICategoryInterface : BaseInterface<Category>
     {
         Category Getfirst();
      
